@@ -1,0 +1,115 @@
+#%RAML 1.0
+title: SC3 Change System API
+baseUri: https://mule-pl.vw-group.com:443/sc3/api/change/
+protocols: [ HTTP, HTTPS ] 
+
+mediaType:
+- application/json
+
+documentation: 
+  - !include documentation/api-doc.raml
+
+
+resourceTypes:
+  method-collection: !include /exchange_modules/ca0eddb1-a8fc-4bc8-8edc-8e98a5623686/common-api-resourcetypes/1.0.0/method-collection.raml
+  file-item: !include /exchange_modules/ca0eddb1-a8fc-4bc8-8edc-8e98a5623686/common-api-resourcetypes/1.0.0/file-input-request.raml
+  api-health: !include /exchange_modules/ca0eddb1-a8fc-4bc8-8edc-8e98a5623686/common-api-resourcetypes/1.0.0/api-health.raml
+
+
+traits:
+  errorTraits: !include libraries/traits/responses/errorResponses.raml
+  200-response: !include libraries/traits/responses/200-response.raml
+  201-response: !include libraries/traits/responses/201-response.raml
+  202-response: !include libraries/traits/responses/202-response.raml
+  204-response: !include libraries/traits/responses/204-response.raml
+  fault-responses: !include exchange_modules/ca0eddb1-a8fc-4bc8-8edc-8e98a5623686/common-api-faults/1.0.0/fault-responses.raml
+  jwt-policy: !include /exchange_modules/ca0eddb1-a8fc-4bc8-8edc-8e98a5623686/common-api-security/1.0.0/jwt-policy.raml
+  common-headers: !include /exchange_modules/ca0eddb1-a8fc-4bc8-8edc-8e98a5623686/common-api-headers/1.0.0/common-headers.raml
+
+/status:
+  type: api-health
+
+/createNormalChangeViaTemplate: 
+    description:  Enables the creation of a change record with the given change template. The change record will be created based on the information within the change template and can be extended with the information given via the interface.
+    post:  
+      is: [errorTraits, jwt-policy]
+      body:
+        application/json:
+          type: !include /data-types/data-objects/change/createNormalChangeViatemplate.raml
+          example: !include /examples/requests/change/createNormalChangeViaTemplate.json
+      responses:
+        200:
+          description: Success
+          body:
+            application/json:
+              example: !include /examples/responses/success.json
+/createStandardChangeViaTemplate:
+    description: Enables the creation of a change record with the given change template. The change record will be created based on the information within the change template and can be extended with the information given via the interface. 
+    post:  
+      is: [errorTraits, jwt-policy]
+      body:
+        application/json:
+          type: !include /data-types/data-objects/change/createStandardChangeViaTemplate.raml
+          example: !include /examples/requests/change/createStandardChangeViaTemplate.json
+      responses:
+        200:
+          description: Success
+          body:
+            application/json:
+              example: !include /examples/responses/success.json
+/finishChangeImplementation:
+    description: Enables you to set a change record to PIR phase in SC3 after the implementation. This can only be used for change records which has been created by your system via the interface.
+    post:  
+      is: [errorTraits, jwt-policy]
+      body:
+        application/json:
+          type: !include /data-types/data-objects/change/finishChangeImplementation.raml
+          example: !include /examples/requests/change/finishChangeImplementation.json
+      responses:
+        200:
+          description: Success
+          body:
+            application/json:
+              example: !include /examples/responses/success.json
+/finishChangePlanning:
+    description: Enables you to set a change record to Authorization phase in SC3. This can only be used for change records which has been created by your system via the interface.
+    post:  
+      is: [errorTraits, jwt-policy]
+      body:
+        application/json:
+          type: !include /data-types/data-objects/change/finishChangePlanning.raml
+          example: !include /examples/requests/change/finishChangePlanning.json
+      responses:
+        200:
+          description: Success
+          body:
+            application/json:
+              example: !include /examples/responses/success.json
+/setApprovalsFromCI:
+    description: Enables you to set the approval groups on a change record based on the CI information in the change record. This can only be used for change records which has been created by your system via the interface.
+    post:  
+      is: [errorTraits, jwt-policy]
+      body:
+        application/json:
+          type: !include /data-types/data-objects/change/setApprovalsFromCI.raml
+          example: !include /examples/requests/change/setApprovalsFromCI.json
+      responses:
+        200:
+          description: Success
+          body:
+            application/json:
+              example: !include /examples/responses/success.json
+/takeOverRfC:
+    description: Enables you to set a change record to Planning phase in SC3. This can only be used for change records which has been created by your system via the interface.
+    post:  
+      is: [errorTraits, jwt-policy]
+      body:
+        application/json:
+          type: !include /data-types/data-objects/change/takeOverRfC.raml
+          example: !include /examples/requests/change/takeOverRfC.json
+      responses:
+        200:
+          description: Success
+          body:
+            application/json:
+              example: !include /examples/responses/success.json
