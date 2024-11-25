@@ -1,0 +1,90 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  Change:
+    type: object
+    properties:
+      SourceID: 
+        type: string
+        maxLength: 255
+      SourceSystem: 
+        type: string
+        maxLength: 60 
+      TemplateID: 
+        type: string
+        maxLength: 60
+      Requestor:
+        type: string 
+        maxLength: 140
+      MainAlteredCI:
+        type: string 
+        required: false
+      InvolvedCIs:
+        type: array 
+        required: false
+        items: !include ../common/ci.raml
+      InformedCIs:
+        type: array 
+        required: false
+        items: !include ../common/ci.raml  
+      AlteredCIs:
+        type: array 
+        required: false
+        items: !include ../common/ci.raml
+      Title: 
+        type: string
+        maxLength: 255
+        required: false
+      Description: 
+        type: string
+        maxLength: 4096
+        required: false
+      PDDescription: 
+        type: string
+        maxLength: 4096
+        required: false
+      Confidential: 
+        type: boolean
+        required: false
+      Tag1: 
+        type: string
+        maxLength: 60
+        required: false
+      Tag2: 
+        type: string
+        maxLength: 60
+        required: false
+      Tag3: 
+        type: string
+        maxLength: 60
+        required: false
+      Tag4: 
+        type: string
+        maxLength: 60
+        required: false
+      Tag5: 
+        type: string
+        maxLength: 60
+        required: false
+      Tag6: 
+        type: string
+        maxLength: 60
+        required: false
+      PlannedStart:
+        type: datetime-only
+      PlannedEnd:
+        type: datetime-only
+      Attachments:
+        type: array 
+        required: false
+        items: !include ../common/wsAttachments.raml
+      HTMLLinks:
+        type: array 
+        required: false
+        items: !include ../common/htmlLinks.raml
+      MessageID:
+        type: string
+        maxLength: 255
+        required: false
+          
+      

@@ -1,0 +1,5 @@
+errorCode: 500
+technicalDetails: "INTERNAL_SERVER_ERROR"
+description: "An error has occured while processing your request, for further details please check logs."
+retry: false
+pointOfFailure: "Processing"

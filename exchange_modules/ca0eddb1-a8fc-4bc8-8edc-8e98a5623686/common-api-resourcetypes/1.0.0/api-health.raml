@@ -1,0 +1,15 @@
+#%RAML 1.0 ResourceType
+    description: This resource provides the metadata of the API as a response when called.
+    get:
+      description:  API Health check mechanism 
+      is: [ fault-responses ]
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                   "status": "OK",
+                   "version": "v1",
+                   "time": "2020-08-19T15:10:16Z"
+                }

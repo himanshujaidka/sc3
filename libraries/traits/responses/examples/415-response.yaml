@@ -1,0 +1,5 @@
+errorCode: 415
+technicalDetails: "UNSUPPORTED_MEDIA_TYPE"
+description: "Requested payload is not in suppotred media type."
+retry: false
+pointOfFailure: "API_KIT"

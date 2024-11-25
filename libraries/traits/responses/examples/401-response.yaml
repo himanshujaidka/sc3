@@ -1,0 +1,5 @@
+errorCode: 401
+technicalDetails: "BASIC_AUTHENTICATION"
+description: "Failed to authorize the request"
+retry: false
+pointOfFailure: "Authentication"

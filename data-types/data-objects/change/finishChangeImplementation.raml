@@ -1,0 +1,42 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  Change:
+    type: object
+    properties:
+      SourceID: 
+        type: string
+        maxLength: 255
+        required: true
+      SourceSystem: 
+        type: string
+        maxLength: 60
+        required: true
+      ChangeRecordID: 
+        type: string
+        maxLength: 255
+        required: true
+      ClosureCode: 
+        type: string
+        maxLength: 255
+      OutOfTime: 
+        type: boolean
+        required: false
+      OutOfProcess:
+        type: boolean
+        required: false
+      Fallback: 
+        type: boolean
+        required: false
+      Other: 
+        type: boolean
+        required: false
+      ClosureComment: 
+        type: string
+        maxLength: 4096
+        required: false
+      MessageID:
+        type: string
+        maxLength: 255
+        required: false
+      

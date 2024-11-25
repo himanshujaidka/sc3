@@ -1,0 +1,5 @@
+errorCode: 404
+technicalDetails: "NOT_FOUND"
+description: "Error Trying to find resource"
+retry: false
+pointOfFailure: "API_KIT"

@@ -1,0 +1,5 @@
+errorCode: 400
+technicalDetails: "REQUEST_VALIDATION_ERROR"
+description: "Invalid schema for content type application/json."
+retry: false
+pointOfFailure: "Validation"

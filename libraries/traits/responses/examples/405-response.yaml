@@ -1,0 +1,5 @@
+errorCode: 405
+technicalDetails: "METHOD_NOT_ALLOWED"
+description: "Requested method not allowed"
+retry: false
+pointOfFailure: "API_KIT"

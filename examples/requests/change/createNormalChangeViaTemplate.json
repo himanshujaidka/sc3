@@ -1,0 +1,59 @@
+{
+	"Change":{
+		"SourceID": "vSourceID",
+		"SourceSystem": "ICTO-1234",
+		"TemplateID": "CRxxx",
+		"Requestor": "Requestor",
+		"MainAlteredCI": "Cxxxx",
+		"MessageID": "vID1123",
+		"AlteredCIs": [
+			{
+				"ConfigurationItemID": "Cxxxx"
+			}
+		],
+		"InvolvedCIs": [
+			{
+				"ConfigurationItemID": "Cxxxx"
+			}
+		],
+		"InformedCIs": [
+			{
+				"ConfigurationItemID": "Cxxxx"
+			}
+		],
+		"Title": "vTitle",
+		"Description": "vDescription",
+		"PDDescription": "PDvDescription",
+		"Confidential": true,
+		"Tag1": "PDvTag1",
+		"Tag2": "PDvTag2",
+		"Tag3": "PDvTag3",
+		"Tag4": "PDvTag4",
+		"Tag5": "PDvTag5",
+		"Tag6": "PDvTag6",
+		"PlannedEnd": "2020-07-15T13:00:05",
+		"PlannedStart": "2020-07-15T13:00:05",
+		"HTMLLinks": [
+			{
+				"Name": "vLinkTitle 1",
+				"Value": "vLinkURL 1"
+			},
+			{
+				"Name": "vLinkTitle 2",
+				"Value": "vLinkURL 2"
+			},
+			{
+				"Name": "vLinkTitle 3",
+				"Value": "vLinkURL 3"
+			}
+		],
+		"Attachments": [
+			{
+				"MIMEType": "plain/text",
+				"FileName": "test.txt",
+				"FileContent": "xsWWWLiasP22ohoBDXszRnBFPbn9gBBYHI3PFqm8jC9WaON2VrCEDE9tggomO2ckdL5/bz7i+f9j58gMzLhw+6KI152P0IWkj7Jm3vH127d3jpLrPIvdaVu6AQGtw4aH900KJj/ub/ft4+5Dx2PSKCIz0npb/aoBB2ijB5FMajug1RSqCdVAIiOeNCpStuWB6HcUTopNzzgui7tlbWWik5Q9sw5lYxwBoQebtfZD8dw2"
+			}
+		]
+	}
+}
+

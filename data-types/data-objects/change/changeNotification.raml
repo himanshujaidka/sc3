@@ -1,0 +1,28 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  Change:
+    type: object
+    properties:
+      TargetID: 
+        type: string
+        maxLength: 255
+      TargetSystem: 
+        type: string
+        maxLength: 60
+      ChangeRecordID: 
+        type: string
+        maxLength: 255
+      Type: 
+        type: string
+        maxLength: 255
+      Description:
+        type: string
+        maxLength: 4096
+        required: false
+      MessageID:
+        type: string
+        maxLength: 255
+        required: false
+
+        

@@ -1,0 +1,5 @@
+errorCode: 408
+technicalDetails: "TIMEOUT"
+description: "Request is timeout"
+retry: true
+pointOfFailure: "Processing"
